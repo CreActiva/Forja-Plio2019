@@ -2,4 +2,4 @@ const getRemainTime = deadline => {  let now = new Date(),    remainTime = (new 
     return {      remainTime,      remainSeconds,      remainMinutes,      remainHours,      remainDays    }};
 const countdown = (deadline, elem, d, h, m, s, finalMessage) => {  const el = document.getElementById(elem);  const di = document.getElementById(d);  const ho = document.getElementById(h);  const mi = document.getElementById(m);    const se = document.getElementById(s);
   const timerUpdate = setInterval( () => {    let t = getRemainTime(deadline);    el.innerHTML = `${t.remainDays} días ${t.remainHours} horas ${t.remainMinutes} minutos y ${t.remainSeconds} segundos`;    di.innerHTML = `${t.remainDays}`;    ho.innerHTML = `${t.remainHours}`;    mi.innerHTML = `${t.remainMinutes}`;    se.innerHTML = `${t.remainSeconds}`;    if (t.remainTime <= 1) {      clearInterval(timerUpdate);      el.innerHTML = finalMessage;    }  }, 1000)};
-countdown('Aug 13 2020 13:00:00 GMT-0400', 'clock', 'dias', 'horas', 'minutos', 'segundos', 'Está en curso');
+countdown('Oct 8 2020 08:00:00 GMT-0400', 'clock', 'dias', 'horas', 'minutos', 'segundos', 'Está en curso');
