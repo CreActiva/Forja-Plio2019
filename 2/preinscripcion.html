@@ -131,8 +131,17 @@
                 <input type='text' class="form-control" id="email" maxlength='100' name='Email' placeholder="Email" required/>
               </div>
               <div class="form-group mx-auto">
-                <label for="phone" class="sr-only">Tel&eacute;fono (con código de área de tu país)</label>
-                <input type='text' class="form-control" id="phone" maxlength='30' name='Phone' placeholder="Tel&eacute;fono (con código de área de tu país)" required/>
+                <label for="phone" class="sr-only">(Código de área) Tel&eacute;fono</label>
+                <input type='text' class="form-control" id="phone" maxlength='30' name='Phone' list="listatelefonos" placeholder="(Código de área) Tel&eacute;fono" required/>
+                <datalist id="listatelefonos">
+                  <option value="+58">
+                  <option value="+1">
+                  <option value="+34">
+                  <option value="+52">
+                  <option value="+54">
+                  <option value="+56">                  
+                  <option value="+506">                  
+                </datalist>
               </div>
               <div class="form-group mx-auto">
                 <!--<label for="company" class="sr-only">Compa&ntilde;&iacute;a</label>
